@@ -7,9 +7,12 @@ public class nextlevel : MonoBehaviour
 {
     // Start is called before the first frame update
     public string lvlName;
+    
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        
+        if(GameController.instance.apples == 0 && collision.gameObject.tag == "Player") 
         {
             SceneManager.LoadScene(lvlName);
         }

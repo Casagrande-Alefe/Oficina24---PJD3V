@@ -11,10 +11,14 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     public GameObject gameOver;
 
+    public int apples;
+
     public static GameController instance;
     // Start is called before the first frame update
     void Start()
     {
+
+        apples = GameObject.FindObjectsOfType<apple>().Length;
         instance = this;
     }
 
